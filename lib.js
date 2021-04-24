@@ -139,6 +139,19 @@ function renderBuff(buff) {
     document.getElementById('buff_' + buff.id).style.backgroundColor = buff.color;
 }
 
-function timeTike() {
-    console.log(new Date().getSeconds());
+function timeTike(game) {
+    // console.log(new Date().getSeconds());
+    // buffsLogic();
+    // botsLogic();        
 }
+
+    function buffslogic(game) {
+        console.log(game.plusCounter());
+        renderBuffs(game.getBuffs());
+}
+
+    function botslogic(game) {
+        console.log(game.plusCounter());
+        renderBots(game.getBots());
+    }
+

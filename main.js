@@ -1,22 +1,22 @@
+let game = new Game();
+
+game.initMap();
+
 let cube = {
     id: 'cube',
-    x: 300,
-    y: 300,
+    x: 0,
+    y: 0,
     width: 56,
     height: 56,
     trnstn: .25,
     step: 56,
-    color: 'orange'
+    color: 'black'
 }
 
-let map = {
-    x: 100,
-    y: 100,
-    width: 470,
-    height: 470,
-    color: '#f5f5f5',
-    border: '#f1f1f1'
-}
+game.pushBot();
+game.pushBuff();
 
-renderMap(map);
-renderCube(spawnCube(map, cube));
+renderMap(game.getMap());
+renderCube(spawnCube(game.getMap(), cube));
+
+let tike = setInterval(timeTike(game), 1000);
